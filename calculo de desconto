@@ -1,0 +1,18 @@
+        
+        #calculo de desconto
+produto=input("Insira o nome do produto ")
+valor=float(input("Insira o valor R$"))
+desconto=float(input("Insira o desconto do produto "))
+cal_desconto = valor * desconto /100
+cal_final = valor - cal_desconto
+
+print("***********************************")
+print("nome do produro",produto )
+print("Valor R$",valor )
+print("pocemtagem do desconto",desconto )
+print("Valor do desconto",cal_desconto )
+print("Valor com desconto",cal_final )
+print("************************************")
+#------------------------------------------------------------------------------------------
+          
+
