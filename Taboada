@@ -1,0 +1,7 @@
+print("*******************************")
+print("**         Tabuada          ***")
+print("*******************************")
+
+numero=int(input("Digite um numero para tabuada: "))
+for n in range(1,11):
+    print(numero,"X",n,"=",numero*n)  
