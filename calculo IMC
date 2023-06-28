@@ -1,0 +1,27 @@
+           #calculo IMC
+peso = float(input("Insira seu PESO em Kg:"))
+altura = float(input("Insira sua altura "))
+cal_IMC = peso /( altura**2)
+
+print("seu IMC é",format(cal_IMC,".2F"))
+
+if (cal_IMC<18.5):
+    print("classificação---------grau")
+    print("MAGREZA                0")
+   
+if (cal_IMC>18.5 and cal_IMC<24.9):
+    print("classificação---------grau")
+    print("NORMAL                 0")
+   
+if (cal_IMC>25.0 and cal_IMC>29.9):
+    print("classificação---------grau")
+    print("SOBREPESO               1°")
+    
+if (cal_IMC>30.0 and cal_IMC>39.9):
+    print("classificação---------grau")
+    print("OBESIDADE              2°")
+    
+if (cal_IMC>40.0):
+    print("classificação---------grau")
+    print("OBESIDADE GRAVE        3°")
+#------------------------------------------------------------------------------------------
