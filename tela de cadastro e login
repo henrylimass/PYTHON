@@ -11,8 +11,9 @@ while tentativas < 3:
     senha=input("Digite sua senha: ")
     
     if login_usuario==login and senha_usuario==senha:
-        print("Login efetuado com sucesso!!")
-        
+       print("********************************")
+       print("* Login efetuado com sucesso! *")
+       print("********************************")
     else:
             print("login ou senha incorretos!!")
             tentativas += 1 
@@ -44,7 +45,7 @@ while tentativas < 3:
                 print("A opção escolhida deve ser entre 1 e 5")        
             
     if tentativas == 3:
-        print("Número máximo de tentativas excedido. Tente novamente mais tarde.")
+        print("| Número máximo de tentativas excedido. Tente novamente mais tarde. |")
         
 else:
-    print("Acesso não autorizado. Encerrando o programa.")
+    print("*Acesso não autorizado. Encerrando o programa.*")
