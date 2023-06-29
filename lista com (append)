@@ -1,0 +1,16 @@
+frutas=["uva","maça",]
+continua=True
+
+while continua:
+    palavra=input("Digite uma Fruta: ")
+    if palavra in frutas:
+        print ("Fruta encontrada")
+    else:
+        print("fruta não encontrada")
+        print("Deseja adicionar fruta? (S/N)")
+        opçao=input()
+        if opçao=="S":
+            frutas.append(palavra)
+            print(palavra, "adicionada com sucesso")
+        else:
+            pass
