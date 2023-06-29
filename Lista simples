@@ -1,0 +1,20 @@
+produtos=[]
+continua=True
+while continua:
+    nome=input("Digite o nome do produto: ")
+    
+    produtos.append(nome)
+    
+    mensagem=input("deseja continuar (S/N)")
+    
+    if mensagem=="S":
+        continua=True
+
+    else:
+        continua=False
+        break
+
+print(produtos)
+
+for n1 in produtos:
+    print=(n1)
