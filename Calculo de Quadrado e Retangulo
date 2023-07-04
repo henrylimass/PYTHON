@@ -1,0 +1,27 @@
+class Poligono:
+    def calcularQuadrado(self,lado):
+        area=lado*lado
+        perimetro=4*lado
+        return area, perimetro
+        
+    def calcularRetangulo(self, base, altura):
+        area=base*altura
+        perimetro=2*(base+altura)
+        return area, perimetro
+        
+po1=Poligono()
+
+while True:
+    print ("1- Quadrado")
+    print ("2- Retangulo")
+    opcao=input()
+    if opcao=="1":
+        lado=float(input("Digite o lado do quadrado: "))
+        print(po1.calcularQuadrado(lado))
+    elif opcao=="2":
+        base=float(input("Digite o valor da base: "))
+        altura=float(input("Digite o valor da altura: "))
+        print(po1.calcularRetangulo(base,altura))
+
+else:
+    pass
