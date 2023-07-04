@@ -1,0 +1,52 @@
+class ContaBancaria:
+    def __init__(self, nomeTitular, numeroConta, saldo=0):
+        self.nomeTitular=nomeTitular
+        self.numeroConta=numeroConta
+        self.saldo=saldo
+        
+    def depositar(self, valor):
+        if valor <= 0:
+            print("você deve depositar um valor maior que 0 (zero)")
+        else:
+            self.saldo+=valor
+            print(f'Seu deposito de R${valor:.2f} foi realizado com sucesso!!!')
+    
+    def sacar(self,valor):
+        if self.saldo < valor:
+            print("voce não possui saldo sulficiente!!!")
+        else:
+            self.saldo-=valor
+            print(f'Seu saquer de R${valor: .2f} foi realizado com sucesso!!!')
+            
+            
+            
+    def exibirinformacao(self):
+        print(f'Número da conta: {self.numeroConta}')
+        print(f'Titular: {self.nomeTitular}')
+        print(f'Saldo: {self.saldo: .2f}')
+       
+cb1=ContaBancaria("joana",2)
+cb1.exibirinformacao()
+
+while True:
+    print("1- Depositar")
+    print("2- Sacar")
+    print("3- Exibir Informação")
+    
+    opcao=input()
+    if opcao=="1":
+        valor=float(input("digite o valor de deposito R$"))
+        cb1.depositar(valor)
+    elif opcao=="2":
+        valor=float(input("digite o valor do Saque R$"))
+        cb1.sacar(valor)
+    elif opcao=="3":
+        cb1.exibirinformacao()
+    else:
+        pass
+        
+    
+    
+    
+    
+    
