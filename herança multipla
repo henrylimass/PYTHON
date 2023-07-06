@@ -1,0 +1,24 @@
+class Animal :
+    def __init__(self, nome):
+        self.nome=nome
+    
+    def comer(self):
+        print(f'{self.nome} esta comendo.')
+  
+class voador:      
+    def voar(self):
+        print(f'{self.nome} esta voando.')
+   
+class nadador:        
+    def nadar(self):
+        print(f'{self.nome} esta nadando.')
+ 
+class PATO(Animal, voador, nadador):
+    def __init__(self,nome):
+        super().__init__(nome)
+            
+    
+pato=PATO("Donald")
+pato.comer()
+pato.voar()
+pato.nadar()
