@@ -1,0 +1,46 @@
+class Radio:
+    def __init__(self, nome):
+        self.nome=nome
+
+class Ligado:
+    def ligando(self):
+        print(f'Rdio {self.nome} Esá ligando')
+
+class volume:      
+    def Almenta(self):
+        print(f'almentando volume do {self.nome}.')
+  
+    def Diminuir(self):
+        print(f'Diminuindo volume do {self.nome}.')
+        
+class Data_e_Hora:
+    def Data(self):
+        print(f'DATA 06/07/2023')
+        
+    def Hora(self):
+        print(f'SÃO 17:00pm')
+        
+class estacao:
+    def frequencia(self):
+        print(f'mudou {self.nome} para frequencia 90.1 MHZ')
+        
+class Desligado:
+    def Desligando(self):
+        print(f'Desligando {self.nome}')
+        
+class RADIO(Ligado, Radio, volume, Data_e_Hora, estacao, Desligado):
+    def __init__(self,nome):
+        super().__init__(nome)
+        
+radio=RADIO("SONY")
+radio.ligando()
+radio.Almenta()
+radio.Diminuir()
+radio.Data()
+radio.Hora()
+radio.frequencia()
+radio.Desligando()
+
+
+        
+ 
