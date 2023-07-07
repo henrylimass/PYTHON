@@ -1,0 +1,43 @@
+'''Juros Poupanca?
+quando a taxa SELIC está acima de 8,5% ao ano, a poupança rende 0,5% ao mês + Taxa Referencial (TR);
+já quando a SELIC está em patamar igual ou abaixo de 8,5% ao ano, a caderneta renderá anualmente apenas 70% da SELIC + TR.
+
+Selic começa 2023 mantida em 13,75% : como investir?
+0,5029 %
+A Taxa Referencial (TR) 2023 é de 0,5029 %.
+
+Numero de saques = 3'''
+
+
+
+class ContaCorrente:
+    def _init_(self, numero, nomeCorrentista, saldo=0.0):
+    self.numero = numero
+    self.alterarNome(nomeCorrentista)
+    self.saldo = saldo
+    
+    def alterarNome(self, nomeCorrentista):
+        self.nomeCorrentista = nomeCorrentista
+
+    def deposito(self, valor):
+        self.saldo += valor
+
+    def saque(self, valor):
+        self.saldo -= valor
+
+class ContaPoupaca(ContaCorrente):
+    def _init_(self, numero, nomeCorrentista, saldo=0.0, numeroSaques=3):
+        super()._init_(numero, nomeCorrentista, saldo=0.0)
+    
+    def saque(self, valor):
+        if numeroSaques<=0:
+            print("Número de saques excedidos.")
+        else:
+            numeroSaques-=1
+            self.saldo -= valor
+    
+    def calcularTXPoupanca(self, selic, tr):
+        if selic>8.5:
+            return 0.5+tr
+        else:
+            return selic*0.7+tr
